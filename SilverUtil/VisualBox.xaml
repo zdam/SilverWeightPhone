@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="SilverUtil.VisualBox"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="5" Height="5">
+	<Canvas 
+		x:Name="TheCanvas"
+        Width="5"
+        Height="5"
+        Background="White"
+		  RenderTransformOrigin="0.5,0.5"
+        >
+		<Image x:Name="TheImage" Source="LargeTestGraphic.jpg" Width="5" Height="5" Stretch="Fill" RenderTransformOrigin="0.5,0.5"></Image>
+
+	</Canvas>
+</UserControl>

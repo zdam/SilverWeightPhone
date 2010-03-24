@@ -1,0 +1,9 @@
+SilverUtil/Bin
+SilverUtil/obj
+SilverWeight/Bin
+SilverWeight/obj
+SilverWeightPhone/Bin
+SilverWeightPhone/obj
+*.user
+*.suo
+*.cache

@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FD2BD80C-B3DC-4A10-953F-4F550187DEDA}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SilverWeight</RootNamespace>
+    <AssemblyName>SilverWeight</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Net" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="math\MathUtil.cs" />
+    <Compile Include="math\Matrix2f.cs" />
+    <Compile Include="math\ROVector2f.cs" />
+    <Compile Include="math\Vector2f.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="raw\Arbiter.cs" />
+    <Compile Include="raw\ArbiterList.cs" />
+    <Compile Include="raw\BasicJoint.cs" />
+    <Compile Include="raw\Body.cs" />
+    <Compile Include="raw\BodyList.cs" />
+    <Compile Include="raw\BroadCollisionStrategy.cs" />
+    <Compile Include="raw\Collide.cs" />
+    <Compile Include="raw\collide\BoxBoxCollider.cs" />
+    <Compile Include="raw\collide\BoxCircleCollider.cs" />
+    <Compile Include="raw\collide\CircleBoxCollider.cs" />
+    <Compile Include="raw\collide\CircleCircleCollider.cs" />
+    <Compile Include="raw\collide\Collider.cs" />
+    <Compile Include="raw\collide\ColliderFactory.cs" />
+    <Compile Include="raw\collide\ColliderUnavailableException.cs" />
+    <Compile Include="raw\collide\EdgeSweep.cs" />
+    <Compile Include="raw\collide\FeaturePair.cs" />
+    <Compile Include="raw\collide\Intersection.cs" />
+    <Compile Include="raw\collide\IntersectionGatherer.cs" />
+    <Compile Include="raw\collide\LineBoxCollider.cs" />
+    <Compile Include="raw\collide\LineCircleCollider.cs" />
+    <Compile Include="raw\collide\LineLineCollider.cs" />
+    <Compile Include="raw\collide\LinePolygonCollider.cs" />
+    <Compile Include="raw\collide\PenetrationSweep.cs" />
+    <Compile Include="raw\collide\PolygonBoxCollider.cs" />
+    <Compile Include="raw\collide\PolygonCircleCollider.cs" />
+    <Compile Include="raw\collide\PolygonPolygonCollider.cs" />
+    <Compile Include="raw\collide\SwapCollider.cs" />
+    <Compile Include="raw\CollisionContext.cs" />
+    <Compile Include="raw\CollisionEvent.cs" />
+    <Compile Include="raw\CollisionListener.cs" />
+    <Compile Include="raw\CollisionSpace.cs" />
+    <Compile Include="raw\ConstrainingJoint.cs" />
+    <Compile Include="raw\Contact.cs" />
+    <Compile Include="raw\ElasticJoint.cs" />
+    <Compile Include="raw\FixedJoint.cs" />
+    <Compile Include="raw\Joint.cs" />
+    <Compile Include="raw\JointList.cs" />
+    <Compile Include="raw\shapes\AABox.cs" />
+    <Compile Include="raw\shapes\AbstractShape.cs" />
+    <Compile Include="raw\shapes\Box.cs" />
+    <Compile Include="raw\shapes\Circle.cs" />
+    <Compile Include="raw\shapes\ConvexPolygon.cs" />
+    <Compile Include="raw\shapes\DynamicShape.cs" />
+    <Compile Include="raw\shapes\Line.cs" />
+    <Compile Include="raw\shapes\Polygon.cs" />
+    <Compile Include="raw\shapes\Shape.cs" />
+    <Compile Include="raw\SpringJoint.cs" />
+    <Compile Include="raw\StaticBody.cs" />
+    <Compile Include="raw\strategies\BruteCollisionStrategy.cs" />
+    <Compile Include="raw\strategies\QuadSpaceStrategy.cs" />
+    <Compile Include="raw\World.cs" />
+    <Compile Include="util\Triangulator.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <ProjectExtensions />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
